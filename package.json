@@ -28,10 +28,13 @@
     "font-awesome": "^4.7.0",
     "ionicons": "^4.6.1",
     "nebular-icons": "^1.1.0",
+    "pace-js": "^1.0.2",
     "roboto-fontface": "^0.10.0",
+    "rxjs": "~6.4.0",
     "socicon": "^3.0.5",
     "tslib": "^1.9.0",
     "typeface-exo": "0.0.61",
+    "zone.js": "~0.9.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.800.6",
