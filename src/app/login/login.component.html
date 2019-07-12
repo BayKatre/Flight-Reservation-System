@@ -1,0 +1,37 @@
+<nb-layout>
+    <nb-layout-column>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-6 offset-3">
+                    <nb-card accent="info">
+                        <nb-card-header>Login</nb-card-header>
+                        <nb-card-body class="example-items-rows">
+                            <form #loginform="ngForm" (ngSubmit)="tryLogin(loginform.value)">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <input type="text" fullWidth nbInput placeholder="Username" name="username" ngModel>
+                                    </div>
+                                </div><br>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <input type="password" fullWidth nbInput placeholder="Password" name="pass" ngModel>
+                                    </div>
+                                </div><hr>
+                                <button nbButton fullWidth status="primary" value="submit">Login</button>
+                                <div *ngIf="loginStatus===1">
+                                        <br>
+                                        <nb-alert status="success">Congratulations. You have been successfully authenticated!</nb-alert>
+                                    </div>
+                                <div *ngIf="loginStatus===2">
+                                    <br>
+                                    <nb-alert status="danger">Danger. You have not been successfully authenticated!</nb-alert>
+                                </div>
+                            </form>
+                        </nb-card-body>
+                        <nb-card-footer>BayKatre Flight Rezervation System</nb-card-footer>
+                    </nb-card>
+                </div>
+            </div>
+        </div>
+    </nb-layout-column>
+</nb-layout>

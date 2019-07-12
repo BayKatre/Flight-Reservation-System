@@ -1,0 +1,46 @@
+<nb-layout>
+  <nb-layout-header fixed>BayKatre Flight Reservation System</nb-layout-header>
+  <nb-layout-column>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12">
+          <nb-card accent="info">
+            <nb-card-header>Buy Ticket</nb-card-header>
+            <nb-card-body class="example-items-rows">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <h5>Source</h5>
+                </div>
+                <div class="col-4">
+                  <h5>Destination</h5>
+                </div>
+                <div class="col-4">
+                  <h5>Date</h5>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <nb-select placeholder="From" filled status="primary" (selectedChange)="getDest($event)">
+                    <nb-option *ngFor="let s of uniqueList" value="{{ s }}">{{s}}</nb-option>
+                  </nb-select>
+                </div>
+                <div class="col-4">
+                  <nb-select placeholder="To" filled status="primary">
+                    <nb-option *ngFor="let d of dUniqueList" value="s.id">{{d}}</nb-option>
+                  </nb-select>
+                </div>
+                <div class="col-4">
+                  <form>
+                  <input fullWidth nbInput placeholder="{{date | date}}" [nbDatepicker]="datepicker">
+                  <nb-datepicker #datepicker></nb-datepicker>
+                  </form>
+                </div>
+              </div>
+            </nb-card-body>
+            <nb-card-footer>BayKatre Flight Rezervation System</nb-card-footer>
+          </nb-card>
+        </div>
+      </div>
+    </div>
+  </nb-layout-column>
+</nb-layout>
